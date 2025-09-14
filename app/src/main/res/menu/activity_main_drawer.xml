@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_safezone"
+            android:icon="@drawable/ic_safezone"
+            android:title="@string/menu_safezone" />
+
+        <item
+            android:id="@+id/nav_emergencysupply"
+            android:icon="@drawable/ic_emergency"
+            android:title="@string/menu_emergencysupply" />
+
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_notification"
+            android:title="@string/menu_notification" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/menu_settings" />
+    </group>
+</menu>

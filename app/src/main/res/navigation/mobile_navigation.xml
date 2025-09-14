@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_safezone">
+
+    <!-- SafeZone Fragment -->
+    <fragment
+        android:id="@+id/nav_safezone"
+        android:name="com.example.flood.safezone.SafeZoneFragment"
+        android:label="@string/menu_safezone"
+        tools:layout="@layout/fragment_safezone" />
+
+    <!-- Emergency Supply Fragment -->
+    <fragment
+        android:id="@+id/nav_emergencysupply"
+        android:name="com.example.flood.emergencysupply.EmergencySupplyFragment"
+        android:label="@string/menu_emergencysupply"
+        tools:layout="@layout/fragment_emergencysupply" />
+
+    <!-- Notification Fragment -->
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.example.flood.notification.NotificationFragment"
+        android:label="@string/menu_notification"
+        tools:layout="@layout/fragment_notification" />
+
+    <!-- Settings Fragment -->
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.flood.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>
