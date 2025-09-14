@@ -46,21 +46,14 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        // ✅ Flood update links (make sure you added link1..link5 IDs in content_main.xml)
-        setLink(findViewById(R.id.link1), "https://ndma.gov.in/")
-        setLink(findViewById(R.id.link2), "https://reliefweb.int/disasters")
-        setLink(findViewById(R.id.link3), "https://www.imd.gov.in/")
-        setLink(findViewById(R.id.link4), "https://floodlist.com/")
-        setLink(findViewById(R.id.link5), "https://timesofindia.indiatimes.com/topic/flood")
-
     }
 
-    private fun setLink(textView: TextView, url: String) {
-        textView.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-            startActivity(intent)
-        }
-    }
+//    private fun setLink(textView: TextView, url: String) {
+//        textView.setOnClickListener {
+//            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+//            startActivity(intent)
+//        }
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)

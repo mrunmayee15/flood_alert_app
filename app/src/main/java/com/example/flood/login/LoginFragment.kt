@@ -1,4 +1,4 @@
-package com.example.flood.auth
+package com.example.flood.login
 
 import android.os.Bundle
 import android.view.View
@@ -42,20 +42,17 @@ class LoginFragment : Fragment(R.layout.login) {
                         this.email = email
                         this.password = password
                     }
-//                    if(result) {
-                        Toast.makeText(requireContext(), "Login Successful!", Toast.LENGTH_SHORT)
-                            .show()
-//                    }// Navigate to home fragment
+                    Toast.makeText(requireContext(), "Login Successful!", Toast.LENGTH_SHORT).show()
+                    // Navigate to home fragment
                 } catch (e: Exception) {
                     Toast.makeText(requireContext(), "Login failed: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }
 
+        // Navigate to signup fragment
         signUpText.setOnClickListener {
-            Toast.makeText(requireContext(), "Sign up clicked", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
+            findNavController().navigate(R.id.nav_signup)
         }
-
     }
 }

@@ -3,9 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_safezone">
+    app:startDestination="@+id/nav_home">
 
-    <!-- SafeZone Fragment -->
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.flood.auth.LoginFragment"
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/nav_signup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.flood.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_signup"
+        android:name="com.example.flood.auth.SignupFragment"
+        tools:layout="@layout/signup" />
     <fragment
         android:id="@+id/nav_safezone"
         android:name="com.example.flood.safezone.SafeZoneFragment"
