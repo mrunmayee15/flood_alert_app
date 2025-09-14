@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Scrollable Flood Updates -->
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
