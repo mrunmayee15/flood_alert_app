@@ -20,9 +20,6 @@
         app:navGraph="@navigation/mobile_navigation" />
 
     <!-- Welcome Heading -->
-
-    <!-- Scrollable Cards -->
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -34,6 +31,7 @@
         android:textSize="60sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -52,6 +50,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Flood Update 1 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,16 +58,19 @@
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp">
 
+                <TextView
+                    android:id="@+id/link1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="NDMA Official Flood Updates"
+                    android:textColor="@color/teal_700"
+                    android:textSize="18sp"
+                    android:clickable="true"
+                    android:focusable="true" />
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Topic 1: Android Basics"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
+            <!-- Flood Update 2 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,16 +78,19 @@
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp">
 
+                <TextView
+                    android:id="@+id/link2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="ReliefWeb - Global Flood Alerts"
+                    android:textColor="@color/teal_700"
+                    android:textSize="18sp"
+                    android:clickable="true"
+                    android:focusable="true" />
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Topic 2: Android Basics"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
+            <!-- Flood Update 3 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -93,16 +98,19 @@
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp">
 
+                <TextView
+                    android:id="@+id/link3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="India Meteorological Department (IMD)"
+                    android:textColor="@color/teal_700"
+                    android:textSize="18sp"
+                    android:clickable="true"
+                    android:focusable="true" />
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Topic 1: Android Basics"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
+            <!-- Flood Update 4 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,16 +118,19 @@
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp">
 
+                <TextView
+                    android:id="@+id/link4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="FloodList - Global Flood News"
+                    android:textColor="@color/teal_700"
+                    android:textSize="18sp"
+                    android:clickable="true"
+                    android:focusable="true" />
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Topic 1: Android Basics"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
+            <!-- Flood Update 5 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -127,83 +138,17 @@
                 app:cardCornerRadius="12dp"
                 app:cardElevation="8dp">
 
+                <TextView
+                    android:id="@+id/link5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="Times of India - Flood News"
+                    android:textColor="@color/teal_700"
+                    android:textSize="18sp"
+                    android:clickable="true"
+                    android:focusable="true" />
             </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Topic 1: Android Basics"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="8dp">
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Topic 1: Android Basics"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="8dp">
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Topic 1: Android Basics"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="8dp">
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Topic 1: Android Basics"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="8dp">
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Topic 1: Android Basics"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
 
         </LinearLayout>
     </ScrollView>
@@ -238,7 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SOS"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -260,7 +205,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Home"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -282,12 +227,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Call"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="12sp" />
         </LinearLayout>
 
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
