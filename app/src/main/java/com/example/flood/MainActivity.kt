@@ -1,7 +1,10 @@
 package com.example.flood
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -31,22 +34,35 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null)
                 .setAnchorView(R.id.fab).show()
         }
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_safezone, R.id.nav_emergencysupply, R.id.nav_notification,R.id.nav_settings
+                R.id.nav_safezone, R.id.nav_emergencysupply, R.id.nav_notification, R.id.nav_settings
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        // ✅ Flood update links (make sure you added link1..link5 IDs in content_main.xml)
+        setLink(findViewById(R.id.link1), "https://ndma.gov.in/")
+        setLink(findViewById(R.id.link2), "https://reliefweb.int/disasters")
+        setLink(findViewById(R.id.link3), "https://www.imd.gov.in/")
+        setLink(findViewById(R.id.link4), "https://floodlist.com/")
+        setLink(findViewById(R.id.link5), "https://timesofindia.indiatimes.com/topic/flood")
+
+    }
+
+    private fun setLink(textView: TextView, url: String) {
+        textView.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
