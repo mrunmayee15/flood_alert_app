@@ -9,8 +9,8 @@
     <fragment
         android:id="@+id/nav_safezone"
         android:name="com.example.flood.safezone.SafeZoneFragment"
-        android:label="@string/menu_safezone"
-        tools:layout="@layout/fragment_safezone" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <!-- Emergency Supply Fragment -->
     <fragment

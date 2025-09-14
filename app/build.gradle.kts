@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -39,7 +40,16 @@ android {
 }
 
 dependencies {
-
+    implementation(platform(libs.supabase.bom))
+    implementation(libs.supabase.postgrest)
+    implementation(libs.supabase.gotrue)
+    implementation("io.ktor:ktor-client-core:2.3.5")
+// Ktor engine for Android (CIO or OkHttp)
+    implementation("io.ktor:ktor-client-cio:2.3.5")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
+// or latest version
+// or use OkHttp engine
+// implementation "io.ktor:ktor-client-okhttp:2.3.5"
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
