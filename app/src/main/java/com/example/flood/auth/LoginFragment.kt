@@ -30,32 +30,54 @@ class LoginFragment : Fragment(R.layout.login) {
         passwordInput = view.findViewById(R.id.editText_password)
         loginButton = view.findViewById(R.id.button_login)
         signUpText = view.findViewById(R.id.button_signup)
+        signUpText.apply {
+            isClickable = true
+            isFocusable = true
+            setOnClickListener {
+                Toast.makeText(requireContext(), "Sign up clicked", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
+            }
+        }
         val supabase = (requireActivity().application as App).supabase
         // Handle login
+
+
         loginButton.setOnClickListener {
             val email = emailInput.text.toString()
             val password = passwordInput.text.toString()
+            if (email.isNullOrEmpty() || password.isNullOrEmpty()) {
+                Toast.makeText(requireContext(), "Please enter both email and password", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(requireContext(), "Please enter a valid email", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             lifecycleScope.launch {
                 try {
                     val result = supabase.gotrue.loginWith(Email) {
                         this.email = email
                         this.password = password
                     }
-//                    if(result) {
+                    if(result!= null) {
                         Toast.makeText(requireContext(), "Login Successful!", Toast.LENGTH_SHORT)
                             .show()
-//                    }// Navigate to home fragment
+                        findNavController().navigate(R.id.nav_home)
+                    }// Navigate to home fragment
                 } catch (e: Exception) {
                     Toast.makeText(requireContext(), "Login failed: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }
 
-        signUpText.setOnClickListener {
-            Toast.makeText(requireContext(), "Sign up clicked", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
-        }
+//        signUpText.setOnClickListener {
+//            Toast.makeText(requireContext(), "Sign up clicked", Toast.LENGTH_SHORT).show()
+//            parentFragmentManager.beginTransaction()
+//                .replace(R.id.nav_signup, SignupFragment())
+//                .addToBackStack(null)
+//                .commit()
+//        }
 
     }
 }

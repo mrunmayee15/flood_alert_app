@@ -4,7 +4,9 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -38,6 +40,38 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
+
+        val sos = findViewById<LinearLayout>(R.id.bottom_sos)
+        val home = findViewById<LinearLayout>(R.id.bottom_home)
+        val call = findViewById<LinearLayout>(R.id.bottom_call)
+
+        home.setOnClickListener {
+            navController.navigate(R.id.nav_home)
+        }
+
+        sos.setOnClickListener {
+            val names = arrayOf("Mom", "Dad", "Brother")
+            AlertDialog.Builder(this)
+                .setTitle("Send SOS to:")
+                .setItems(names) { _, which ->
+                    val selected = names[which]
+                    // TODO: Implement sending SOS message here
+                }
+                .show()
+        }
+
+        call.setOnClickListener {
+            val helplines = arrayOf("Flood Helpline: 12345", "Emergency: 112", "Local Police: 100")
+            AlertDialog.Builder(this)
+                .setTitle("Call Helpline")
+                .setItems(helplines) { _, which ->
+                    val number = helplines[which].substringAfter(":").trim()
+                    // TODO: start phone dialer
+                     val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$number"))
+                     startActivity(intent)
+                }
+                .show()
+        }
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_safezone, R.id.nav_emergencysupply, R.id.nav_notification, R.id.nav_settings
@@ -48,12 +82,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-//    private fun setLink(textView: TextView, url: String) {
-//        textView.setOnClickListener {
-//            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-//            startActivity(intent)
-//        }
-//    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)
