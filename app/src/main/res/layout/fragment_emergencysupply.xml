@@ -1,6 +1,203 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F9FF"> <!-- light bluish background -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/emergency_kit_banner_vector"
+        android:contentDescription="Emergency Icon" />
+
+    <TextView
+        android:id="@+id/tvChecklistTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Emergency Supplies"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvChecklistSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keep these essential items ready to stay safe during floods and other emergencies."
+        android:textSize="14sp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medical &amp; Safety"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="#E8F0FE"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="First Aid Kit"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Prescription Medicines (7 days)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hand Sanitizer &amp; Soap"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mosquito Repellent"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Food &amp; Water"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="#FFF8E1"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Drinking Water Bottles (3L per person/day)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Water Purification Tablets"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dry Food (biscuits, energy bars, dry fruits)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Baby Food / Infant Formula"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clothing &amp; Protection"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="#E8F5E9"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Raincoat / Waterproof Jacket"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Umbrella"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Extra Clothes (in waterproof bag)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Warm Clothing / Blankets"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lighting &amp; Power"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="#FFF3E0"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Torch / Flashlight"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Extra Batteries"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Power Bank / Solar Charger"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Documents &amp; Money"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="#F3E5F5"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ID Cards (Aadhaar, Passport, License)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cash (small denominations)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bank Passbook / Cards"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Emergency Contact Numbers (on paper)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Waterproof Pouch for Documents"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Emergency Tools"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="#FFEBEE"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Whistle (to call for help)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rope"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Multipurpose Knife"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plastic Sheet / Tarpaulin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Communication"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="#E1F5FE"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mobile Phone (fully charged)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Extra SIM Card"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Portable Radio (battery-powered)"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hygiene &amp; Sanitation"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="#F1F8E9"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sanitary Pads / Hygiene Products"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Towels &amp; Tissues"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Disinfectant Wipes"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Garbage Bags"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Special Needs"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:background="#FFFDE7"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp" />
+
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Baby Diapers &amp; Essentials"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Elderly Care Items (glasses, walking stick, batteries)"/>
+            <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pet Food &amp; Leash"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

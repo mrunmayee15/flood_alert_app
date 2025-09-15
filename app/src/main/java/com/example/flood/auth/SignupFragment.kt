@@ -28,7 +28,6 @@ import kotlinx.coroutines.launch
             emailInput = view.findViewById(R.id.editText_email_signup)
             passwordInput = view.findViewById(R.id.editText_password_signup)
             signupButton = view.findViewById(R.id.button_signup)
-            loginText = view.findViewById(R.id.textView_login)
             val supabase = (requireActivity().application as App).supabase
 
             signupButton.setOnClickListener {

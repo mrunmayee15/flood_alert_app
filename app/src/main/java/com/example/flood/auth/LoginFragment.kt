@@ -34,13 +34,11 @@ class LoginFragment : Fragment(R.layout.login) {
             isClickable = true
             isFocusable = true
             setOnClickListener {
-                Toast.makeText(requireContext(), "Sign up clicked", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(requireContext(), "Sign up clicked", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
             }
         }
         val supabase = (requireActivity().application as App).supabase
-        // Handle login
-
 
         loginButton.setOnClickListener {
             val email = emailInput.text.toString()

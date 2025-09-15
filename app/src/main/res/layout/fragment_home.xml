@@ -35,7 +35,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Flood Update 1 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,7 +54,6 @@
                     android:focusable="true" />
             </androidx.cardview.widget.CardView>
 
-            <!-- Flood Update 2 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +73,6 @@
                     android:focusable="true" />
             </androidx.cardview.widget.CardView>
 
-            <!-- Flood Update 3 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,7 +92,6 @@
                     android:focusable="true" />
             </androidx.cardview.widget.CardView>
 
-            <!-- Flood Update 4 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -115,7 +111,6 @@
                     android:focusable="true" />
             </androidx.cardview.widget.CardView>
 
-            <!-- Flood Update 5 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
